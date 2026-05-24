@@ -201,7 +201,7 @@ width:350px;
 <div class="header">
 
 <div class="brand">
-INCLO.STORE
+INCLO STORE
 </div>
 
 <h1>
@@ -223,13 +223,9 @@ COLLECTION
 
 <div class="info">
 
-<div class="category">
-LIMITED SERIES
-</div>
+<div class="category">LIMITED SERIES</div>
 
-<h2>
-SNSB NOIR HOODIE
-</h2>
+<h2>SNSB NOIR HOODIE</h2>
 
 <p class="desc">
 Heavy monochrome aesthetic with clean structure
@@ -237,17 +233,36 @@ and understated luxury aura.
 </p>
 
 <div class="price">
-IDR 289.000
+IDR 680.000
 </div>
 
-<a href="shipping.html?product=SNSB-NOIR-HOODIE" class="btn">
+<div class="size">
+<label>SIZE:</label>
+
+<button class="size-option active" onclick="selectSize('M')">
+M
+</button>
+</div>
+
+<a href="#" class="btn" onclick="goToShipping()">
 BUY NOW
 </a>
 
 </div>
 </div>
-
 </div>
+<script>
+let selectedSize = "M"; // default karena cuma ready M
 
+function selectSize(size){
+selectedSize = size;
+}
+
+function goToShipping(){
+window.location.href =
+"shipping.html?product=SNSB-NOIR-HOODIE" +
+"&size=" + selectedSize;
+}
+</script>
 </body>
 </html>
