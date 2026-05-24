@@ -160,9 +160,24 @@ Complete your shipping details before payment.
 
 <input type="text" placeholder="Address">
 
-<button onclick="window.location.href='payment.html'">
+<button onclick="continuePayment()">
 CONTINUE
 </button>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+const product = params.get("product");
+
+function continuePayment(){
+
+window.location.href =
+`payment.html?product=${product}`;
+
+}
+
+</script>
 
 </div>
 
