@@ -131,12 +131,26 @@ for payment confirmation and checkout process.
 </p>
 
 <a
-href="https://wa.me/6289666846125"
+id="waBtn"
 target="_blank"
 class="btn"
 >
 CONTINUE TO WHATSAPP
 </a>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+const product = params.get("product");
+
+const message =
+`Hello INCLO.STORE, I want to order ${product}`;
+
+document.getElementById("waBtn").href =
+`https://wa.me/6289666846125?text=${encodeURIComponent(message)}`;
+
+</script>
 
 </div>
 
