@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAYMENT | INCLO.STORE</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Montserrat',sans-serif;
+}
+
+body{
+background:#050505;
+color:white;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+overflow:hidden;
+}
+
+/* BG */
+
+.bg-logo{
+position:absolute;
+width:500px;
+opacity:0.03;
+z-index:-1;
+}
+
+/* BOX */
+
+.box{
+width:100%;
+max-width:420px;
+
+background:
+linear-gradient(
+145deg,
+rgba(255,255,255,0.04),
+rgba(255,255,255,0.01)
+);
+
+border:
+1px solid rgba(255,255,255,0.08);
+
+backdrop-filter:blur(12px);
+
+padding:35px;
+border-radius:28px;
+text-align:center;
+}
+
+/* TITLE */
+
+.box h1{
+font-size:32px;
+letter-spacing:3px;
+margin-bottom:18px;
+}
+
+.box p{
+font-size:14px;
+color:#a0a0a0;
+line-height:1.8;
+margin-bottom:30px;
+}
+
+/* BUTTON */
+
+.btn{
+display:block;
+
+padding:16px;
+
+border-radius:100px;
+
+background:white;
+color:black;
+
+text-decoration:none;
+
+font-weight:600;
+letter-spacing:2px;
+
+transition:0.4s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.box{
+padding:28px;
+}
+
+.box h1{
+font-size:26px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<img src="logo_incloofficial.png" class="bg-logo">
+
+<div class="box">
+
+<h1>PAYMENT</h1>
+
+<p>
+Continue your order directly with our admin
+for payment confirmation and checkout process.
+</p>
+
+<a
+href="https://wa.me/6289666846125"
+target="_blank"
+class="btn"
+>
+CONTINUE TO WHATSAPP
+</a>
+
+</div>
+
+</body>
+</html>
