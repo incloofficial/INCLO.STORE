@@ -1,87 +1,228 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>INCLO.STORE</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
+<title>INCLO.STORE</title>
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial, sans-serif;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    body{
-      background:#0d0d0d;
-      color:white;
-    }
+<style>
 
-    .hero{
-      height:100vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      flex-direction:column;
-      text-align:center;
-      padding:20px;
-      background:linear-gradient(
-      to bottom,
-      #000,
-      #111,
-      #1a1a1a
-      );
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-    h1{
-      font-size:52px;
-      letter-spacing:6px;
-      margin-bottom:15px;
-    }
+body{
+background:#050505;
+color:white;
+overflow:hidden;
+font-family:'Montserrat',sans-serif;
+}
 
-    p{
-      color:#bdbdbd;
-      max-width:500px;
-      line-height:1.7;
-      margin-bottom:30px;
-    }
+/* BACKGROUND */
 
-    .btn{
-      padding:14px 35px;
-      border:1px solid #444;
-      color:white;
-      text-decoration:none;
-      border-radius:50px;
-      transition:0.3s;
-      background:#151515;
-    }
+.hero{
+height:100vh;
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+padding:20px;
+position:relative;
 
-    .btn:hover{
-      background:white;
-      color:black;
-    }
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,0.72),
+rgba(0,0,0,0.95)
+),
+url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1400&auto=format&fit=crop');
 
-  </style>
+background-size:cover;
+background-position:center;
+}
+
+/* LOGO */
+
+.logo-img{
+width:90px;
+margin-bottom:22px;
+opacity:0.95;
+
+filter:
+drop-shadow(0 0 18px rgba(255,255,255,0.08));
+
+animation:fade 1.5s ease;
+}
+
+/* BRAND */
+
+.brand{
+font-size:13px;
+letter-spacing:8px;
+color:#bdbdbd;
+margin-bottom:22px;
+font-weight:400;
+
+animation:fade 2s ease;
+}
+
+/* TITLE */
+
+.title{
+font-family:'Cinzel',serif;
+font-size:58px;
+font-weight:600;
+line-height:1.15;
+letter-spacing:5px;
+margin-bottom:24px;
+
+animation:fadeUp 1.5s ease;
+}
+
+/* DESC */
+
+.desc{
+max-width:560px;
+font-size:14px;
+line-height:1.9;
+color:#c94f4f;
+margin-bottom:38px;
+font-weight:300;
+
+animation:fadeUp 1.8s ease;
+}
+
+/* BUTTON */
+
+.btn{
+padding:15px 42px;
+border-radius:100px;
+
+border:
+1px solid rgba(255,255,255,0.14);
+
+background:
+rgba(255,255,255,0.05);
+
+backdrop-filter:blur(12px);
+
+text-decoration:none;
+color:white;
+
+font-size:12px;
+letter-spacing:3px;
+font-weight:500;
+
+transition:0.4s;
+
+animation:fadeUp 2s ease;
+}
+
+.btn:hover{
+background:white;
+color:black;
+transform:translateY(-4px);
+}
+
+/* BOTTOM TEXT */
+
+.bottom{
+position:absolute;
+bottom:28px;
+
+font-size:11px;
+letter-spacing:5px;
+color:#7d7d7d;
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes fade{
+from{
+opacity:0;
+}
+to{
+opacity:1;
+}
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.title{
+font-size:38px;
+letter-spacing:3px;
+}
+
+.desc{
+font-size:13px;
+line-height:1.8;
+padding:0 10px;
+}
+
+.logo-img{
+width:75px;
+}
+
+}
+
+</style>
 </head>
+
 <body>
 
-  <section class="hero">
+<section class="hero">
 
-    <h1>INCLO.STORE</h1>
+<!-- LOGO -->
+<img src="logo_incloofficial.png" class="logo-img">
 
-    <p>
-      Elegant streetwear with monochrome identity.
-      Exclusive look. Affordable value.
-    </p>
+<!-- BRAND -->
+<div class="brand">
+INCLO.STORE
+</div>
 
-    <a href="#" class="btn">
-      EXPLORE
-    </a>
+<!-- TITLE -->
+<h1 class="title">
+TIMELESS<br>
+MONOCHROME
+</h1>
 
-  </section>
+<!-- DESCRIPTION -->
+<p class="desc">
+MADE OF INSULTS
+</p>
+
+<!-- BUTTON -->
+<a href="shop.html" class="btn">
+EXPLORE COLLECTION
+</a>
+
+<!-- BOTTOM -->
+<div class="bottom">
+EST. 2025
+</div>
+
+</section>
 
 </body>
 </html>
