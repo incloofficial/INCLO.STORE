@@ -237,49 +237,75 @@ COLLECTION
 </div>
 
 <!-- PRODUCTS -->
-
 <div class="products">
 
-<!-- PRODUCT 1 -->
+  <!-- PRODUCT 1 -->
+  <div class="card">
 
-<div class="card">
+    <img src="noir_front.jpg">
 
-<img src="noir_front.jpg">
+    <div class="info">
 
-<div class="info">
+      <h2>SNSB NOIR HOODIE</h2>
 
-<h2>SNSB NOIR HOODIE</h2>
+      <div class="price">IDR 680.000</div>
 
-<div class="price">
-IDR 680.000
-</div>
+      <div class="size">
+        <label>SIZE:</label>
 
-<div class="size">
-<label>SIZE:</label>
+        <button class="size-option active"
+        onclick="goToShipping('SNSB-NOIR-HOODIE','M')">
+        M
+        </button>
+      </div>
 
-<button class="size-option active" onclick="selectSize('M')">
-M
-</button>
-</div>
+      <a href="#" class="btn"
+      onclick="goToShipping('SNSB-NOIR-HOODIE','M')">
+      BUY NOW
+      </a>
 
-<a href="#" class="btn" onclick="goToShipping()">
-BUY NOW
-</a>
+    </div>
+  </div>
 
-</div>
-</div>
+  <!-- PRODUCT 2 -->
+  <div class="card">
+
+    <img src="tee_black.jpg">
+
+    <div class="info">
+
+      <h2>OVERSHIRT TROUBLEMMAKER</h2>
+
+      <div class="price">IDR 200.000</div>
+
+      <div class="size">
+        <label>SIZE:</label>
+
+        <button class="size-option"
+        onclick="goToShipping('OVERSHIRT-TROUBLEMMAKER','S')">
+        S
+        </button>
+
+        <button class="size-option active"
+        onclick="goToShipping('OVERSHIRT-TROUBLEMMAKER','M')">
+        M
+        </button>
+      </div>
+
+      <a href="#" class="btn"
+      onclick="goToShipping('OVERSHIRT-TROUBLEMMAKER','M')">
+      BUY NOW
+      </a>
+
+    </div>
+  </div>
+
 </div>
 <script>
-let selectedSize = "M"; // default karena cuma ready M
-
-function selectSize(size){
-selectedSize = size;
-}
-
-function goToShipping(){
+function goToShipping(product, size){
 window.location.href =
-"shipping.html?product=SNSB-NOIR-HOODIE" +
-"&size=" + selectedSize;
+"shipping.html?product=" + product +
+"&size=" + size;
 }
 </script>
 </body>
